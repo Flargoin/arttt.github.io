@@ -4,6 +4,10 @@ const leftMenu = document.querySelector('.left__menu');
 const rightMenu = document.querySelector('.right__menu');
 const closeL = document.querySelector('.closel');
 const closeR = document.querySelector('.closer');
+const videoBtn = document.querySelector('.video');
+const videoContent = document.querySelector('.video__content');
+
+
 
 burger.addEventListener('click',function(event){
     leftMenu.classList.add("activel");
@@ -20,6 +24,10 @@ closeL.addEventListener('click', function(event){
 closeR.addEventListener('click', function(event){
     leftMenu.classList.remove("activel");
     rightMenu.classList.remove("activer");
+});
+
+videoBtn.addEventListener('click', function(){
+    videoContent.classList.toggle('active__video');
 });
 
 

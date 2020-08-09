@@ -112,16 +112,18 @@ body {
   text-align: center;
   margin-bottom: 20px; }
 
+.content__video {
+  margin-bottom: 50px; }
+
 .video {
   width: 100%;
   padding-top: 8px;
   padding-bottom: 9px;
-  border-radius: 10px;
+  border-radius: 10px 10px 0px 0px;
   border: none;
   background-color: rgba(34, 34, 34, 0.7);
   color: #fff;
   font-size: 15px;
-  margin-bottom: 50px;
   font-family: "Roboto Slab", sans-serif;
   cursor: pointer; }
   .video::after {
@@ -132,11 +134,20 @@ body {
     background-image: url(../img/icons8-длинная-стрелка-вверх-24.png);
     background-position: center;
     background-size: cover;
-    transform: rotate(180deg); }
+    transform: rotate(180deg);
+    margin-bottom: -3px; }
+    .video::after::after:active {
+      content: '';
+      transform: rotate(0deg); }
   .video .video__text {
     display: inline-block;
     margin-right: 205px;
     margin-left: 215px; }
+
+iframe {
+  height: 0;
+  border-radius: 0px 0px 10px 10px;
+  transition: 0.8s; }
 
 .content__text {
   font-size: 15px;
@@ -252,3 +263,34 @@ body {
 
 .activer {
   right: 0; }
+
+.active__video {
+  height: 100%; }
+
+@media (max-width: 1200px) {
+  .content__box {
+    padding: 65px 110px; }
+  iframe {
+    width: 518px; }
+  .content__title {
+    font-size: 35px; }
+  .right__menu,
+  .left__menu {
+    width: 100%; } }
+
+@media (max-width: 767px) {
+  .content__box {
+    padding: 45px 30px; }
+  .content__title {
+    font-size: 24px; }
+  .content__video {
+    margin-bottom: 10px; }
+  .arrow__left,
+  .arrow__right {
+    font-size: 14px; }
+  .video .video__text {
+    display: inline-block;
+    margin-right: 50px;
+    margin-left: 70px; }
+  iframe {
+    width: 230px; } }
